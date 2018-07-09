@@ -94,6 +94,9 @@ else
     speechRecognitionScript;
     disp("The given sample most closely resembles the following person in our database:");
     disp(name);
+    disp("Was that done correctly?");
+    [rows, cols] = size(log);
+    log{2,cols} = input('Type yes or no: ', 's');
 end
 
        

@@ -62,4 +62,4 @@ else
 end
 disp(" ");
 disp("saving data and exiting");
-save('Database', 'C', 'scoreArray');
+save('Database', 'C', 'log');

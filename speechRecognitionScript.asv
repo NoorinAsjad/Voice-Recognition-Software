@@ -1,5 +1,5 @@
 [nrows, ncols] = size(C);
-threshold = 70;
+threshold = 75;
 name = 'Does not exist in our database.';
 score = 0;
 minscore = 200;
@@ -16,9 +16,7 @@ for i = 1:nrows
        matcha = true;
     end
 end
-[rows, cols] = size(log);
 if matcha
-    log{1,cols+1} = threshold;
+    scoreArray = [scoreArray threshold];
 else
-     log{1,cols+1}  = minscore;
-end
+    scoreArray = [scoreArray minscore];
