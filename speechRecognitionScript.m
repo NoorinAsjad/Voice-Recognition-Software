@@ -1,5 +1,5 @@
 [nrows, ncols] = size(C);
-threshold = 68;
+threshold = 75;
 name = 'Does not exist in our database.';
 for i = 1:nrows
     temp = C{i,2};

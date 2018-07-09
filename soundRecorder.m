@@ -1,3 +1,5 @@
+
+    
 disp("Do you want to record voice samples (0) or supply a stored voice sample file from your pc? (1):");
 userText = input('');
 if (userText ~= 0 && userText ~= 1)
@@ -5,8 +7,7 @@ if (userText ~= 0 && userText ~= 1)
         userText = input('Please enter 0 or 1: ');
     end
 end
-load('Database.mat');
-[nrows, ncols] = size(C);
+
 processedSpeech = [];
 
 if (userText == 0)
@@ -88,7 +89,6 @@ if recording
     userName = input('Please type your name: ','s');
     C{nrows+1, 1} = userName;
     C{nrows+1, 2} = processedSpeech;
-    save('Database', 'C');
 else
     unknown = processedSpeech;
     speechRecognitionScript;
