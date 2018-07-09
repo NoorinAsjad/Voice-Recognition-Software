@@ -21,6 +21,7 @@ if (userText == 0)
        disp("You will need to record a 5 second audio clip in clear voice");
    end
    disp(" ");
+   pause(2.0);
    
    while(counter>0)
        number = 1;
@@ -29,12 +30,18 @@ if (userText == 0)
        end
        disp("Sample "+number);
        z = audiorecorder(44100, 16, 1);
-       disp("Start speaking");
+       disp("Start speaking: ");
+       if recording
+           disp("A QUICK BROWN FOX JUMPED OVER THE LAZY DOG");
+       else
+           disp("Speak anything in clear voice");
+       end
        recordblocking(z, 5);
        disp("Sample number "+number+" completed");
        play(z);
        disp("Are you satisfied, or do you want to retake that?")
        user = input('Press 0 if you want to redo the sample, or any other number to proceed: ');
+       disp(" ");
        if user ~= 0
            counter = counter - 1;
            x = getaudiodata(z);
@@ -46,7 +53,7 @@ else
     disp("You chose to supply your own voice sample. You will need sound files of 44.1 kHz sampling frequency")
     counter = 1;
     if recording
-        disp("You will need to supply 3 voice sample files saying the following once, each time in clear voice");
+        disp("You will need to supply 3 voice sample files saying the following ONCE, each time in clear voice");
         counter = 3;
         disp(" ");
         disp("A QUICK BROWN FOX JUMPED OVER THE LAZY DOG");
