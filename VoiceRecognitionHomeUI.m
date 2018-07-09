@@ -1,4 +1,3 @@
-clear
 disp("VOICE RECOGNITION SOFTWARE");
 disp("By Noorin Asjad");
 disp(" ");

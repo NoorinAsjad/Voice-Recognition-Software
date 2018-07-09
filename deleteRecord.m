@@ -60,6 +60,6 @@ if recording
 else
         soundRecorder
 end
-
-disp("saving data");
-save('Database', 'C');
+disp(" ");
+disp("saving data and exiting");
+save('Database', 'C', 'scoreArray');
