@@ -1,6 +1,6 @@
 [nrows, ncols] = size(C);
-minscore = 1000;
-name = 'random';
+minscore = 200;
+name = 'Does not exist in our database.';
 for i = 1:nrows
     temp = C{i,2};
     score = myscorefunction(temp, unknown);
